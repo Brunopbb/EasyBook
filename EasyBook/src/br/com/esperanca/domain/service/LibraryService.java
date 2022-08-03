@@ -1,6 +1,8 @@
 package br.com.esperanca.domain.service;
 
 import java.util.Calendar;
+
+import br.com.esperanca.domain.Enums.StatusClient;
 import br.com.esperanca.domain.model.*;
 
 public class LibraryService {
@@ -47,13 +49,17 @@ public class LibraryService {
     }
 
     public void cadastrationBook(Book book){
+
         this.books[controlBook] = book;
         controlBook++;
+
     }
 
     public void cadastrationClient(Client client){
+
         this.clients[controlClient] = client;
         controlClient++;
+
     }
 
     private Client searchClient(String name){
@@ -70,15 +76,15 @@ public class LibraryService {
 
     }
 
-    public boolean clientVerification(String name){
+    private boolean clientVerification(String name){
         Client client = searchClient(name);
-        return client != null && client.getStatus().equals("A");
+        return client != null && client.getStatus().equals(StatusClient.ACTIVE);
     }
 
-    public Book searchBook(String name){
+    private Book searchBook(String name){
         if(books != null){
             for(Book book : books){
-                if(book.getName().equals(name)){
+                if(book != null && book.getName().equals(name)){
                     return book;
                 }
             }
@@ -86,14 +92,14 @@ public class LibraryService {
         return null;
     }
 
-    public boolean bookVerification(String name){
+    private boolean bookVerification(String name){
         Book book = searchBook(name);
-        return book != null && book.getAmount() > 0;
+        return book != null && book.getAmount() >= 0;
     }
 
     public boolean makeALoan(Client client, Book book){
         if(clientVerification(client.getName()) && bookVerification(book.getName())){
-            loans[controlLoan] = new Loan(client.getIdRegistration(), book.getId(), generateDateLoan() , "3/07/2022");
+            loans[controlLoan] = new Loan(client.getIdRegistration(), book.getId(), generateDateLoan() , generateReturnDate());
             book.setAmount(book.getAmount()-1);
             controlLoan++;
             return true;
@@ -112,6 +118,8 @@ public class LibraryService {
     }
 
     public void mulctManagement(){
+
+
 
     }
 
@@ -137,7 +145,7 @@ public class LibraryService {
         if(clients != null){
             for(Client client : clients){
                 if(client != null && client.getIdRegistration().equals(idClient)){
-                    client.setStatus("M");
+                    client.setStatus(StatusClient.WITH_MULCT);
                 }
             }
         }
@@ -146,25 +154,27 @@ public class LibraryService {
 
     public String[] getIdClientWithReturnDateInvalid(){
 
-        String[] idsClients = new String[loans.length];
+        String[] idsClients = new String[controlLoan];
 
-        for(int i = 0; i < loans.length; i++){
-            if(loans[i] != null ) {
-                int day = Integer.parseInt(loans[i].getReturnDate().split("/")[0]);
-                int month = Integer.parseInt(loans[i].getReturnDate().split("/")[1]);
-                if (day > date.get(Calendar.DAY_OF_WEEK) && month >= date.get(Calendar.MONTH)) {
+        for(int i = 0; i < controlLoan; i++){
 
-                    idsClients[i] = loans[i].getIdClient();
+            int day = Integer.parseInt(loans[i].getReturnDate().split("/")[0]);
+            int month = Integer.parseInt(loans[i].getReturnDate().split("/")[1]);
+            if (day > date.get(Calendar.DAY_OF_WEEK) && month > date.get(Calendar.MONTH)) {
 
-                }
-            }else{
-                break;
+                idsClients[i] = loans[i].getIdClient();
+
             }
         }
+
 
         return idsClients;
 
     }
+
+
+
+
 
     public void relatory(){
         System.out.println("--------Livros--------");

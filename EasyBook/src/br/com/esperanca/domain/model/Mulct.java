@@ -3,13 +3,12 @@ package br.com.esperanca.domain.model;
 public class Mulct {
 
     private String idClient;
-    private static final double value;
+    private static final double VALUE = 1.0;
 
-    static {
-        value = 1.0;
-    }
+
 
     public Mulct() {
+
 
     }
 
@@ -26,13 +25,13 @@ public class Mulct {
     }
 
     public double getValue() {
-        return value;
+        return VALUE;
     }
 
 
     public void print(){
         System.out.println("idClient: "+idClient);
-        System.out.println("Value: "+value);
+        System.out.println("Value: "+VALUE);
 
     }
 

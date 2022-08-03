@@ -1,5 +1,6 @@
 package br.com.esperanca.test;
 
+import br.com.esperanca.domain.Enums.StatusClient;
 import br.com.esperanca.domain.model.Address;
 import br.com.esperanca.domain.model.Book;
 import br.com.esperanca.domain.model.Client;
@@ -12,9 +13,9 @@ public class LibraryServiceTest01 {
 //
 //
         Address address = new Address("Rua 1", "58135000", "Esperanca", 40);
-        Client client1 = new Client("idregistration", "Bruno Almeida", "02/02/1999", "A", "123456789", address);
-        Client client2 = new Client("idregistration2", "Sabrina", "02/02/2000", "D", "1598753", address);
-        Client client3 = new Client("idregistration3", "Maria", "02/02/1993", "A", "159877746", address);
+        Client client1 = new Client("idregistration", "Bruno Almeida", "02/02/1999", StatusClient.ACTIVE, "123456789", address);
+        Client client2 = new Client("idregistration2", "Sabrina", "02/02/2000", StatusClient.ACTIVE, "1598753", address);
+        Client client3 = new Client("idregistration3", "Maria", "02/02/1993",StatusClient.WITH_MULCT, "159877746", address);
 //
         Book book1 = new Book("idbook1", "Sapiens", "1", "genero", "harari", 3);
         Book book2 = new Book("idbook2", "Codigo limpo", "3", "genero", "Robert", 1);
@@ -31,7 +32,7 @@ public class LibraryServiceTest01 {
         libraryService.cadastrationBook(book3);
 //
         System.out.println(libraryService.makeALoan(client1, book2));
-        System.out.println(libraryService.makeALoan(client3, book1));
+        System.out.println(libraryService.makeALoan(client2, book1));
 
 
 

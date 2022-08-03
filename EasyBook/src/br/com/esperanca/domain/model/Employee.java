@@ -1,19 +1,23 @@
 package br.com.esperanca.domain.model;
 
-public class Employee {
+import br.com.esperanca.domain.Enums.EmployeeType;
+
+public abstract class Employee {
 
 
     private String id;
     private String name;
     private double salary;
+    private EmployeeType employeeType;
 
     public Employee() {
     }
 
-    public Employee(String id, String name, double salary) {
+    public Employee(String id, String name, double salary, EmployeeType employeeType) {
         this.id = id;
         this.name = name;
         this.salary = salary;
+        this.employeeType = employeeType;
     }
 
     public String getId() {

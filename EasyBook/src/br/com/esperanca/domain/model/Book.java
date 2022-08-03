@@ -30,6 +30,7 @@ public class Book {
         System.out.println("Edition: "+edition);
         System.out.println("Genre: "+genre);
         System.out.println("Author: "+author);
+        System.out.println("Amount: "+amount);
     }
 
     public String getId() {
