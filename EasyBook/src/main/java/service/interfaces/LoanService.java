@@ -3,6 +3,7 @@ package service.interfaces;
 import model.Book;
 import model.Client;
 
+import java.time.LocalDate;
 
 
 public interface LoanService {
@@ -10,9 +11,9 @@ public interface LoanService {
     boolean makeALoan(Book book, Client client);
     void showLoans();
 
-    String generateDataReturn();
+    LocalDate generateDataReturn();
 
-    String  generateDataLoan();
+
 
 
 }

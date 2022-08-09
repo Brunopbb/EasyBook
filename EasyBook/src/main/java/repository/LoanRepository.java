@@ -4,22 +4,22 @@ import model.Loan;
 
 public class LoanRepository {
 
-    private Loan[] loans = new Loan[100];
+    private static Loan[] loans = new Loan[100];
     private static int loanControl;
 
 
 
     public void setOneLoan(Loan loan){
-        this.loans[loanControl] = loan;
+        LoanRepository.loans[loanControl] = loan;
     }
 
 
-    public Loan[] getLoans() {
+    public static Loan[] getLoans() {
         return loans;
     }
 
     public void setLoans(Loan[] loans) {
-        this.loans = loans;
+        LoanRepository.loans = loans;
     }
 
     public static int getLoanControl() {

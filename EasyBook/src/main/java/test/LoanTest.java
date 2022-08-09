@@ -17,8 +17,6 @@ public class LoanTest {
 
         LoanService loanService = new LoanServiceIMPL();
 
-        //ClientRepository.getClient()[0].print();
-
         loanService.makeALoan(BookRepository.getBooks()[0], ClientRepository.getClient()[0]);
 
         loanService.showLoans();

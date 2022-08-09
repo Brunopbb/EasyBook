@@ -5,55 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40e3da5d-c1e1-4ac5-953d-c60553925eb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Loan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/LoanRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/BookServiceIMPL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/ClientServiceIMPL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/LoanServiceIMPL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/enums/StatusClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/interfaces/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/interfaces/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/interfaces/LoanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/BookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/ClientTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/LoanTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/EasyBook.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/Enums/EmployeeType$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/Enums/EmployeeType$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/Enums/EmployeeType$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/Enums/EmployeeType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/Enums/StatusClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/model/Address.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/model/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/model/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/model/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/model/Loan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/model/Mulct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/domain/service/LibraryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/test/LibraryServiceTest01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyBook/br/com/esperanca/test/LibraryServiceTest02.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/domain/Enums/EmployeeType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/domain/Enums/StatusClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/domain/model/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/domain/model/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/domain/model/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/domain/model/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/domain/model/Loan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/domain/model/Mulct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/domain/service/LibraryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/test/LibraryServiceTest01.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/esperanca/test/LibraryServiceTest02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Loan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LoanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LoanRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LoanServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LoanServiceIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/interfaces/LoanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/interfaces/LoanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/LoanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/LoanTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/LoanRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/LoanRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/LoanServiceIMPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/LoanServiceIMPL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/BookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/BookTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,18 +50,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/bruno/Documents/My files/Java/maratona-java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.LoanTest">
     <configuration name="BookTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.BookTest" />
@@ -144,8 +107,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.LoanTest" />
-        <item itemvalue="Application.ClientTest" />
         <item itemvalue="Application.BookTest" />
+        <item itemvalue="Application.ClientTest" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +120,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659584775217</updated>
-      <workItem from="1659584776860" duration="37634000" />
+      <workItem from="1659584776860" duration="41306000" />
+      <workItem from="1659981450282" duration="135000" />
+      <workItem from="1660006918576" duration="39000" />
+      <workItem from="1660008604919" duration="5642000" />
     </task>
     <servers />
   </component>

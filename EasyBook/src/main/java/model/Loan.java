@@ -1,13 +1,15 @@
 package model;
 
+import java.time.LocalDate;
+
 public class Loan {
 
     private String idClient;
     private String idBook;
-    private String date;
-    private String returnDate;
+    private LocalDate date;
+    private LocalDate returnDate;
 
-    public Loan(String idClient, String idBook, String date, String returnDate) {
+    public Loan(String idClient, String idBook, LocalDate date, LocalDate returnDate) {
         this.idClient = idClient;
         this.idBook = idBook;
         this.date = date;
@@ -37,19 +39,19 @@ public class Loan {
         this.idBook = idBook;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
-    public String getReturnDate() {
+    public LocalDate getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(String returnDate) {
+    public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
     }
 

@@ -7,17 +7,22 @@ import repository.LoanRepository;
 import service.enums.StatusClient;
 import service.interfaces.LoanService;
 
-import java.util.Calendar;
+
+
+import java.time.LocalDate;
+import java.time.ZoneId;
 
 public class LoanServiceIMPL implements LoanService {
 
     private final LoanRepository LOANREPOSITORY = new LoanRepository();
-    private final Calendar DATE = Calendar.getInstance();
+
+
+    private final LocalDate LOCALDATE = LocalDate.now(ZoneId.systemDefault());
 
     public boolean makeALoan(Book book, Client client){
 
         if(book.getAmount() > 1 && client.getStatusClient() == StatusClient.ACTIVE){
-            Loan loan = new Loan(client.getIdClient(), book.getId(), generateDataLoan(), generateDataReturn());
+            Loan loan = new Loan(client.getIdClient(), book.getId(), LOCALDATE, generateDataReturn());
             LOANREPOSITORY.setOneLoan(loan);
             LoanRepository.setLoanControl(LoanRepository.getLoanControl() + 1);
             return true;
@@ -27,22 +32,17 @@ public class LoanServiceIMPL implements LoanService {
 
     }
 
-    @Override
-    public String generateDataLoan() {
-        return DATE.get(Calendar.DAY_OF_MONTH)+"/"+ DATE.get(Calendar.MONTH)+"/"+ DATE.get(Calendar.YEAR);
-    }
 
-    public String generateDataReturn(){
-        int month = DATE.get(Calendar.MONTH) + 1;
-        return DATE.get(Calendar.DAY_OF_MONTH)+"/"+month+"/"+ DATE.get(Calendar.YEAR);
-    }
+    public LocalDate generateDataReturn(){
 
+        return LOCALDATE.plusMonths(1);
+    }
 
 
     public void showLoans(){
 
-        if(LOANREPOSITORY.getLoans() != null){
-            for(Loan loan: LOANREPOSITORY.getLoans()){
+        if(LoanRepository.getLoans() != null){
+            for(Loan loan: LoanRepository.getLoans()){
                 if(loan != null){
 
                     loan.print();
