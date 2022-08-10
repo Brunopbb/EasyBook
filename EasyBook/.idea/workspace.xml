@@ -5,16 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40e3da5d-c1e1-4ac5-953d-c60553925eb3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Mulct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/MulctRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/MulctServiceIMPL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/interfaces/MulctService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/MulctTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Loan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/LoanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LoanRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/BookServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BookServiceIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ClientServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ClientServiceIMPL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/LoanServiceIMPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LoanServiceIMPL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/interfaces/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/interfaces/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/interfaces/LoanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/interfaces/LoanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/test/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/ClientTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/test/LoanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/LoanTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/BookRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/ClientRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/ClientRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repository/LoanRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/LoanRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/BookServiceIMPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/BookServiceIMPL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/ClientServiceIMPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/ClientServiceIMPL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/LoanServiceIMPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/LoanServiceIMPL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/test/BookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/BookTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/ClientTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/ClientTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/LoanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/LoanTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +77,8 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager" selected="Application.LoanTest">
@@ -104,11 +121,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MulctTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.MulctTest" />
+      <module name="EasyBook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.LoanTest" />
-        <item itemvalue="Application.BookTest" />
         <item itemvalue="Application.ClientTest" />
+        <item itemvalue="Application.BookTest" />
+        <item itemvalue="Application.MulctTest" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +154,8 @@
       <workItem from="1659584776860" duration="41306000" />
       <workItem from="1659981450282" duration="135000" />
       <workItem from="1660006918576" duration="39000" />
-      <workItem from="1660008604919" duration="5642000" />
+      <workItem from="1660008604919" duration="17406000" />
+      <workItem from="1660106099806" duration="1790000" />
     </task>
     <servers />
   </component>

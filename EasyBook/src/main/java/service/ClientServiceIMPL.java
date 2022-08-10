@@ -10,7 +10,7 @@ public class ClientServiceIMPL implements ClientService {
     private final ClientRepository CLIENTREPOSITORY = new ClientRepository();
 
 
-    //implementar metodos
+
 
     @Override
     public boolean addClient(Client client) {
@@ -18,7 +18,7 @@ public class ClientServiceIMPL implements ClientService {
 
         if(index == -1){
             CLIENTREPOSITORY.setOneClient(client);
-            ClientRepository.setClientControl(ClientRepository.getClientControl() + 1);
+            CLIENTREPOSITORY.setClientControl(CLIENTREPOSITORY.getClientControl() + 1);
             return true;
         }
 
@@ -32,13 +32,13 @@ public class ClientServiceIMPL implements ClientService {
 
         int index = searchClient(name);
 
-        if(index == -1 || ClientRepository.getClient() == null || ClientRepository.getClient()[index].getStatusClient() != StatusClient.ACTIVE){
+        if(index == -1 || CLIENTREPOSITORY.getClient() == null || CLIENTREPOSITORY.getClient()[index].getStatusClient() != StatusClient.ACTIVE){
             return false;
         }
 
-        for (int i = index; i < ClientRepository.getClientControl(); i++) {
-            if(ClientRepository.getClient()[i] != null){
-                ClientRepository.getClient()[i] = ClientRepository.getClient()[i + 1];
+        for (int i = index; i < CLIENTREPOSITORY.getClientControl(); i++) {
+            if(CLIENTREPOSITORY.getClient()[i] != null){
+                CLIENTREPOSITORY.getClient()[i] = CLIENTREPOSITORY.getClient()[i + 1];
             }
         }
         return true;
@@ -57,11 +57,11 @@ public class ClientServiceIMPL implements ClientService {
     @Override
     public int searchClient(String name) {
 
-        Client[] clients = ClientRepository.getClient();
+        Client[] clients = CLIENTREPOSITORY.getClient();
 
         if(clients != null){
-            for(int i = 0; i < ClientRepository.getClientControl(); i++){
-                if(clients[i] != null && clients[i].getName().equals(name)){
+            for(int i = 0; i < CLIENTREPOSITORY.getClientControl(); i++){
+                if(clients[i] != null && clients[i].getName().equalsIgnoreCase(name)){
                     return i;
                 }
             }
@@ -72,8 +72,8 @@ public class ClientServiceIMPL implements ClientService {
     @Override
     public void listClients() {
 
-        if(ClientRepository.getClient() != null){
-            for(Client client : ClientRepository.getClient()){
+        if(CLIENTREPOSITORY.getClient() != null){
+            for(Client client : CLIENTREPOSITORY.getClient()){
                 if(client != null){
 
                     System.out.println("---------------");

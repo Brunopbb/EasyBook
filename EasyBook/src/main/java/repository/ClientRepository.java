@@ -4,27 +4,27 @@ import model.Client;
 
 public class ClientRepository {
 
-    private static Client[] client = new Client[100];
-    private static int  clientControl;
+    private Client[] client = new Client[100];
+    private int  clientControl;
 
 
     public void setOneClient(Client client){
-        ClientRepository.client[clientControl] = client;
+        this.client[clientControl] = client;
     }
 
-    public static Client[] getClient() {
+    public Client[] getClient() {
         return client;
     }
 
     public void setClient(Client[] client) {
-        ClientRepository.client = client;
+        this.client = client;
     }
 
-    public static int getClientControl() {
+    public int getClientControl() {
         return clientControl;
     }
 
-    public static void setClientControl(int clientControl) {
-        ClientRepository.clientControl = clientControl;
+    public void setClientControl(int clientControl) {
+        this.clientControl = clientControl;
     }
 }

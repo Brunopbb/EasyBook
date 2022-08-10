@@ -15,11 +15,11 @@ public class BookServiceIMPL implements BookService {
 
         if(index == -1){
             BOOKREPOSITORY.setOneBooks(book);
-            BookRepository.setBookControl(BookRepository.getBookControl()+1);
+            BOOKREPOSITORY.setBookControl(BOOKREPOSITORY.getBookControl()+1);
 
         }else{
 
-            BookRepository.getBooks()[index].setAmount(BookRepository.getBooks()[index].getAmount() + book.getAmount());
+            BOOKREPOSITORY.getBooks()[index].setAmount(BOOKREPOSITORY.getBooks()[index].getAmount() + book.getAmount());
 
 
         }
@@ -29,10 +29,12 @@ public class BookServiceIMPL implements BookService {
 
     }
 
+
+
     public int searchBook(String name){
-        if(BookRepository.getBooks() != null){
-            for(int i = 0; i < BookRepository.getBookControl(); i++){
-                if(BookRepository.getBooks()[i] != null && BookRepository.getBooks()[i].getName().equals(name)){
+        if(BOOKREPOSITORY.getBooks() != null){
+            for(int i = 0; i < BOOKREPOSITORY.getBookControl(); i++){
+                if(BOOKREPOSITORY.getBooks()[i] != null && BOOKREPOSITORY.getBooks()[i].getName().equals(name)){
                     return i;
                 }
             }
@@ -42,11 +44,11 @@ public class BookServiceIMPL implements BookService {
 
     public void listBooks(){
 
-        if(BookRepository.getBooks() != null){
-            for(int i = 0; i < BookRepository.getBookControl(); i++){
-                if(BookRepository.getBooks()[i] != null){
+        if(BOOKREPOSITORY.getBooks() != null){
+            for(int i = 0; i < BOOKREPOSITORY.getBookControl(); i++){
+                if(BOOKREPOSITORY.getBooks()[i] != null){
                     System.out.println("------------------------");
-                    BookRepository.getBooks()[i].print();
+                    BOOKREPOSITORY.getBooks()[i].print();
                 }
             }
         }
@@ -55,7 +57,7 @@ public class BookServiceIMPL implements BookService {
     public boolean removeBook(String name, int amount){
 
         int index = searchBook(name);
-        Book[] books = BookRepository.getBooks();
+        Book[] books = BOOKREPOSITORY.getBooks();
 
         if (index != -1) {
             if (books[index].getAmount() >= 1) {
@@ -63,7 +65,7 @@ public class BookServiceIMPL implements BookService {
                     books[index].setAmount(books[index].getAmount() - amount);
                     return true;
                 } else if (amount == books[index].getAmount()) {
-                    for (int i = index; i < BookRepository.getBookControl(); i++) {
+                    for (int i = index; i < BOOKREPOSITORY.getBookControl(); i++) {
                         books[i] = books[i + 1];
                     }
 
@@ -77,5 +79,7 @@ public class BookServiceIMPL implements BookService {
         return false;
 
     }
+
+
 
 }
